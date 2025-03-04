@@ -27,6 +27,7 @@ h1, h2, h3 {
     z-index: 1000;
     transition: background 0.5s ease;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .animated-header.scrolled {
@@ -38,12 +39,23 @@ h1, h2, h3 {
     height: auto;
 }
 
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
 }
 
 nav a {
@@ -52,24 +64,33 @@ nav a {
     font-weight: 600;
     transition: color 0.3s ease;
     font-size: 16px;
+    padding: 10px;
 }
 
 nav a:hover {
     color: #f4b400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .animated-header {
         flex-direction: column;
         text-align: center;
+        padding: 10px;
     }
     
     .logo img {
         max-width: 120px;
     }
     
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
     nav ul {
         flex-direction: column;
+        align-items: center;
         padding: 10px 0;
     }
 }
