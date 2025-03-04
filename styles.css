@@ -111,9 +111,7 @@ nav a:hover {
 
 .hero-content {
     animation: fadeIn 2s ease-in;
-    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px;
 }
 
 .btn {
@@ -129,14 +127,17 @@ nav a:hover {
     background: #ffcc00;
 }
 
-/* Parallax About Section with Background Image */
-.parallax {
-    background: url('images/about-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    padding: 100px 20px;
+/* About Section with Background Image */
+#about {
+    background: url('images/about-bg.jpg') no-repeat center center/cover;
+    padding: 80px 10%;
     color: white;
     text-align: center;
-    position: relative;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Services Section with Horizontal Layout */
