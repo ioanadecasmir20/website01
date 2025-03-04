@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securix Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Securix Education</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h2>Empowering Careers, Securing Futures</h2>
+        <p>Providing top-quality vocational and security training courses.</p>
+        <a href="courses.html" class="btn">Explore Courses</a>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Securix Education specializes in vocational courses and security services, equipping learners with essential skills for career success.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Securix Education | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
