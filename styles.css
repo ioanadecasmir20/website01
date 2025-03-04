@@ -140,25 +140,18 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Services Section with Grid Layout */
-#services-list {
+/* Services Section with Horizontal Layout */
+#services {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
     padding: 50px 5%;
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
 .service-card {
+    width: 30%;
     background: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -174,8 +167,20 @@ nav a:hover {
     border-radius: 10px 10px 0 0;
 }
 
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+@media (max-width: 1024px) {
+    #services {
+        flex-direction: column;
     }
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #001f3f;
+    color: white;
+    margin-top: 20px;
 }
