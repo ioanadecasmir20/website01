@@ -5,18 +5,19 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
     text-align: center;
 }
 
-/* Header Animation */
+/* Responsive Header */
 .animated-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 5%;
     background: linear-gradient(to right, #001f3f, #003366);
     color: white;
     position: fixed;
@@ -25,16 +26,24 @@ h1, h2, h3 {
     left: 0;
     z-index: 1000;
     transition: background 0.5s ease;
+    flex-wrap: wrap;
 }
 
 .animated-header.scrolled {
     background: #001f3f;
 }
 
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
 }
 
 nav a {
@@ -42,10 +51,27 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    font-size: 16px;
 }
 
 nav a:hover {
     color: #f4b400;
+}
+
+@media (max-width: 768px) {
+    .animated-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo img {
+        max-width: 120px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
 }
 
 /* Hero Section */
@@ -87,7 +113,8 @@ nav a:hover {
 /* Feature Section with Slide-in Effect */
 .feature-card {
     text-align: center;
-    width: 30%;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
     background: white;
     padding: 20px;
