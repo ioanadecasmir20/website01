@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(feature);
     });
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle - Fixed
     const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
+    const mobileMenu = document.querySelector("#mobile-menu");
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener("click", function() {
-            nav.classList.toggle("active");
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
         });
     }
 
@@ -45,4 +45,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-})
+});
