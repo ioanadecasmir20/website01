@@ -6,6 +6,7 @@ body {
     background: #f4f4f4;
     color: #333;
     overflow-x: hidden;
+    padding-top: 80px;
 }
 
 h1, h2, h3 {
@@ -414,11 +415,13 @@ nav a:hover {
 
 .faq-item p {
     font-size: 1rem;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
 
 .faq-item.active p {
-    display: block;
+    max-height: 200px; /* Adjust based on content size */
 }
 
 .faq-item a {
