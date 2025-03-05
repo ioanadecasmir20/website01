@@ -69,5 +69,17 @@
     <footer>
         <p>&copy; 2025 Securix Education | All Rights Reserved</p>
     </footer>
+
+    <script>
+        function toggleFAQ(item) {
+            item.classList.toggle("active");
+            let content = item.querySelector("p");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
