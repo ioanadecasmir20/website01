@@ -281,12 +281,6 @@ nav a:hover {
     text-align: center;
 }
 
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
 /* Careers Grid Layout */
 #careers-list {
     display: flex;
@@ -359,12 +353,6 @@ nav a:hover {
     text-align: center;
     background: #f4f4f4;
     color: #333;
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
 }
 
 /* Contact Information Section */
