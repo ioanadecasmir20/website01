@@ -21,8 +21,26 @@ document.addEventListener("DOMContentLoaded", function() {
     features.forEach(feature => {
         observer.observe(feature);
     });
-});
 
-function toggleMenu() {
-    document.getElementById("mobile-menu").classList.toggle("active");
-}
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    menuToggle.addEventListener("click", function() {
+        nav.classList.toggle("active");
+    });
+
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+        item.addEventListener("click", function() {
+            this.classList.toggle("active");
+            let content = this.querySelector("p");
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+});
