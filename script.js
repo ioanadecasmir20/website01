@@ -45,4 +45,28 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // Preloader Functionality
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 500);
+    }, 1000); // Preloader duration
+
+    // Smooth Page Transitions
+    const links = document.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            if (this.getAttribute("href") !== "#") {
+                event.preventDefault(); // Stop default navigation
+                const href = this.getAttribute("href");
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href; // Navigate after fade effect
+                }, 300);
+            }
+        });
+    });
 });
