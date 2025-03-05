@@ -26,9 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
 
-    menuToggle.addEventListener("click", function() {
-        nav.classList.toggle("active");
-    });
+    if (menuToggle && nav) {
+        menuToggle.addEventListener("click", function() {
+            nav.classList.toggle("active");
+        });
+    }
 
     // FAQ Toggle Functionality
     const faqItems = document.querySelectorAll(".faq-item");
@@ -36,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
         item.addEventListener("click", function() {
             this.classList.toggle("active");
             let content = this.querySelector("p");
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.display === "block") {
+                content.style.display = "none";
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.display = "block";
             }
         });
     });
-});
+})
