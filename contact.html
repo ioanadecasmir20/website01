@@ -43,23 +43,23 @@
     <section id="faq" class="contact-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
-            <div class="faq-item">
+            <div class="faq-item" onclick="toggleFAQ(this)">
                 <h3>What courses do you offer?</h3>
                 <p>We provide vocational training in security, first aid, conflict management, and various CPD courses.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" onclick="toggleFAQ(this)">
                 <h3>How can I apply for a job?</h3>
                 <p>You can apply for available security positions through our <a href="careers">Careers Page</a>.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" onclick="toggleFAQ(this)">
                 <h3>Where are your training courses held?</h3>
                 <p>We offer both in-person training at our London facility and online courses.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" onclick="toggleFAQ(this)">
                 <h3>Do I need prior experience to enroll?</h3>
                 <p>No prior experience is needed for most courses. Some advanced certifications may have prerequisites.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" onclick="toggleFAQ(this)">
                 <h3>How do I contact support?</h3>
                 <p>You can email us at <strong>support@securixeducation.com</strong> or call our helpline.</p>
             </div>
@@ -69,7 +69,7 @@
     <footer>
         <p>&copy; 2025 Securix Education | All Rights Reserved</p>
     </footer>
-
+    
     <script>
         function toggleFAQ(item) {
             item.classList.toggle("active");
