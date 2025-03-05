@@ -353,6 +353,93 @@ nav a:hover {
     }
 }
 
+/* Contact Page Styling */
+#contact-hero {
+    padding: 100px 5% 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Contact Information Section */
+#contact-info {
+    text-align: center;
+    padding: 50px 5%;
+    background: #f4f4f4;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 50px 5%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    transform: scale(1.02);
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+}
+
+.faq-item a {
+    color: #f4b400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    #faq {
+        padding: 30px 5%;
+    }
+
+    .faq-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .faq-item p {
+        font-size: 0.9rem;
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
