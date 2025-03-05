@@ -357,6 +357,8 @@ nav a:hover {
 #contact-hero {
     padding: 100px 5% 20px;
     text-align: center;
+    background: url('images/contact-bg.jpg') no-repeat center center/cover;
+    color: white;
 }
 
 .page-title {
@@ -366,10 +368,22 @@ nav a:hover {
 }
 
 /* Contact Information Section */
-#contact-info {
-    text-align: center;
+.contact-section {
     padding: 50px 5%;
-    background: #f4f4f4;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    flex: 1;
+    padding-right: 20px;
 }
 
 .contact-details h2 {
@@ -382,11 +396,25 @@ nav a:hover {
     margin: 10px 0;
 }
 
+.contact-image {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
 /* FAQ Section */
 #faq {
     padding: 50px 5%;
     max-width: 1000px;
     margin: auto;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #faq h2 {
@@ -394,13 +422,19 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .faq-item {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .faq-item:hover {
@@ -414,6 +448,11 @@ nav a:hover {
 
 .faq-item p {
     font-size: 1rem;
+    display: none;
+}
+
+.faq-item.active p {
+    display: block;
 }
 
 .faq-item a {
@@ -427,8 +466,14 @@ nav a:hover {
 }
 
 @media (max-width: 1024px) {
-    #faq {
-        padding: 30px 5%;
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-details {
+        padding-right: 0;
+        margin-bottom: 20px;
     }
 
     .faq-item h3 {
