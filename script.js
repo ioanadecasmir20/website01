@@ -22,3 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(feature);
     });
 });
+
+function toggleMenu() {
+    document.getElementById("mobile-menu").classList.toggle("active");
+}
