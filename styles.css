@@ -485,12 +485,11 @@ footer {
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: block; /* Show button only on mobile */
     }
 
-    nav {
+    #mobile-menu {
         display: none;
-        flex-direction: column;
         position: absolute;
         top: 60px;
         right: 0;
@@ -498,25 +497,25 @@ footer {
         background: #003366;
         text-align: center;
         padding: 10px 0;
+        flex-direction: column;
     }
 
-    nav ul {
+    #mobile-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    #mobile-menu ul {
         flex-direction: column;
         width: 100%;
     }
 
-    nav ul li {
+    #mobile-menu ul li {
         margin: 10px 0;
     }
 
-    nav ul li a {
+    #mobile-menu ul li a {
         font-size: 18px;
         padding: 10px;
         display: block;
     }
-
-    nav.active {
-        display: flex;
-    }
 }
-
