@@ -46,16 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Preloader Functionality
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-        preloader.style.opacity = "0";
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 500);
-    }, 1000); // Preloader duration
-
-    // Smooth Page Transitions
+    // Smooth Page Transition Between Links (Option 2)
     const links = document.querySelectorAll("a");
     links.forEach(link => {
         link.addEventListener("click", function(event) {
